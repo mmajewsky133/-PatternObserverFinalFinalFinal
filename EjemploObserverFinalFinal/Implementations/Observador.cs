@@ -1,18 +1,17 @@
 ﻿using EjemploObserverFinalFinal.Implementations;
 using EjemploObserverFinalFinal.Interfaces;
 using System;
-
 using System.Web.UI.WebControls;
 
 namespace ObsrPatro.Implementations
 {
-    public class Octavio : IObserver
+    public class Observador : IObserver
     {
         private CosoQueNotifica _cosoQueNotifica;
         private TextBox _mensajeTextBox;
         private CosoQueNotifica cosoQueNotifica;
 
-        public Octavio(CosoQueNotifica cosoQueNotifica, TextBox mensajeTextBox)
+        public Observador(CosoQueNotifica cosoQueNotifica, TextBox mensajeTextBox)
         {
             _cosoQueNotifica = cosoQueNotifica;
             _mensajeTextBox = mensajeTextBox;
@@ -34,3 +33,4 @@ namespace ObsrPatro.Implementations
         }
     }
 }
+

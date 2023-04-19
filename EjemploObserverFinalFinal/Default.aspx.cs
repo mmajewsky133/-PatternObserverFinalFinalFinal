@@ -29,12 +29,18 @@ namespace EjemploObserverFinalFinal
         {
             string mensaje = tbMensaje.Text;
 
-            Martin martin = new Martin(cosoQueNotifica, msgMartin);
-            Octavio octavio = new Octavio(cosoQueNotifica, msgOctavio);
+            Observador martin = new Observador(cosoQueNotifica, msgMartin);
+            Observador octavio = new Observador(cosoQueNotifica, msgOctavio);
+            Observador ana = new Observador(cosoQueNotifica, msgAna);
+            Observador juan = new Observador(cosoQueNotifica, msgJuan);
+
+
 
             martin.suscribir();
             octavio.suscribir();
-            
+            ana.suscribir();
+            juan.suscribir();
+
 
             if (cosoQueNotifica != null)
             {
