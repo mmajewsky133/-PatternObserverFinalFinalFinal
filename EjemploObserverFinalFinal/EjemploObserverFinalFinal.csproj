@@ -186,6 +186,7 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\SubscriptionController.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -197,8 +198,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Implementations\CosoQueNotifica.cs" />
-    <Compile Include="Implementations\Martin.cs" />
-    <Compile Include="Implementations\Octavio.cs" />
+    <Compile Include="Implementations\Observador.cs" />
     <Compile Include="Interfaces\INotifier.cs" />
     <Compile Include="Interfaces\IObserver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -1,15 +1,15 @@
-﻿using EjemploObserverFinalFinal.Implementations;
-using EjemploObserverFinalFinal.Interfaces;
+﻿using EjemploObserverFinalFinal.Interfaces;
 using System;
 using System.Web.UI.WebControls;
 
-namespace ObsrPatro.Implementations
+namespace EjemploObserverFinalFinal.Implementations
 {
     public class Observador : IObserver
     {
         private CosoQueNotifica _cosoQueNotifica;
         private TextBox _mensajeTextBox;
-        private CosoQueNotifica cosoQueNotifica;
+
+        public bool Subscribed {get; set;}
 
         public Observador(CosoQueNotifica cosoQueNotifica, TextBox mensajeTextBox)
         {
@@ -33,4 +33,3 @@ namespace ObsrPatro.Implementations
         }
     }
 }
-
