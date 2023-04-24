@@ -13,93 +13,30 @@ namespace EjemploObserverFinalFinal {
     public partial class _Default {
         
         /// <summary>
-        /// tbMensaje control.
+        /// btnHacerEvent control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbMensaje;
+        protected global::System.Web.UI.WebControls.Button btnHacerEvent;
         
         /// <summary>
-        /// btnMandarMensaje control.
+        /// BtnEventListenerSuscribe control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnMandarMensaje;
+        protected global::System.Web.UI.WebControls.Button BtnEventListenerSuscribe;
         
         /// <summary>
-        /// msgOctavio control.
+        /// BtnEventListenerSQLSuscribe control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox msgOctavio;
-        
-        /// <summary>
-        /// btnSubs1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSubs1;
-        
-        /// <summary>
-        /// msgMartin control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox msgMartin;
-        
-        /// <summary>
-        /// btnSubs2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSubs2;
-        
-        /// <summary>
-        /// msgAna control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox msgAna;
-        
-        /// <summary>
-        /// btnSubs3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSubs3;
-        
-        /// <summary>
-        /// msgJuan control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox msgJuan;
-        
-        /// <summary>
-        /// btnSubs4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSubs4;
+        protected global::System.Web.UI.WebControls.Button BtnEventListenerSQLSuscribe;
     }
 }
