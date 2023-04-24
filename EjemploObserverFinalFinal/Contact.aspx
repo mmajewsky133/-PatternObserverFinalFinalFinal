@@ -1,17 +1,24 @@
-﻿<%@ Page Title="Contact" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="EjemploObserverFinalFinal.Contact" %>
+﻿<%@ Page Title="Event Listener" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="EjemploObserverFinalFinal.Contact" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <h2><%: Title %>.</h2>
-    <h3>Your contact page.</h3>
-    <address>
-        One Microsoft Way<br />
-        Redmond, WA 98052-6399<br />
-        <abbr title="Phone">P:</abbr>
-        425.555.0100
-    </address>
-
-    <address>
-        <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-        <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-    </address>
+    <h2><%: Title %></h2>
+    <br />
+    <ul id="log"></ul>
+    <script src="Scripts/jquery-3.3.1.min.js"></script>
+    <script src="Scripts/jquery.signalR-2.4.3.min.js"></script>
+    <script src="signalr/hubs"></script>
+    <script type="text/javascript">
+        $(function() {
+            var hub = $.connection.messageHub;
+            hub.client.broadcastMessage = function (date, detail) {
+               // Html encode display name and message. 
+                var encodedDate = $('<div />').text(date).html();
+                var encodedDetail = $('<div />').text(detail).html();
+               // Add the message to the page. 
+                $('#log').append('<li><strong>' + encodedDate
+                    + '</strong>:&nbsp;&nbsp;' + encodedDetail + '</li>');
+            };
+            $.connection.hub.start().done();
+        });
+    </script>
 </asp:Content>

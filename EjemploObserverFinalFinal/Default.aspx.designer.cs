@@ -7,47 +7,36 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EjemploObserverFinalFinal
-{
-
-
-    public partial class _Default
-    {
-
+namespace EjemploObserverFinalFinal {
+    
+    
+    public partial class _Default {
+        
         /// <summary>
-        /// tbMensaje control.
+        /// btnHacerEvent control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbMensaje;
-
+        protected global::System.Web.UI.WebControls.Button btnHacerEvent;
+        
         /// <summary>
-        /// btnMandarMensaje control.
+        /// BtnEventListenerSuscribe control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnMandarMensaje;
-
+        protected global::System.Web.UI.WebControls.Button BtnEventListenerSuscribe;
+        
         /// <summary>
-        /// msgOctavio control.
+        /// BtnEventListenerSQLSuscribe control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox msgOctavio;
-
-        /// <summary>
-        /// msgMartin control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox msgMartin;
+        protected global::System.Web.UI.WebControls.Button BtnEventListenerSQLSuscribe;
     }
 }

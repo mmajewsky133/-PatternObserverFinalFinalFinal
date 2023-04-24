@@ -1,54 +1,51 @@
 ﻿using EjemploObserverFinalFinal.Implementations;
-using EjemploObserverFinalFinal.Interfaces;
-using ObsrPatro.Implementations;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using EjemploObserverFinalFinal.Interfaces;
 
 namespace EjemploObserverFinalFinal
 {
     public partial class _Default : System.Web.UI.Page
     {
+        private PageEventHandler pageEventHandler;
 
-        CosoQueNotifica cosoQueNotifica = new CosoQueNotifica();
- 
+        private MessageEventListener messageEventListener;
+        private SQLEventListener sqlEventListener;
+
         protected void Page_Load(object sender, EventArgs e)
         {
-
-            if (!IsPostBack)
+            if (IsPostBack)
             {
-                
+                pageEventHandler = new PageEventHandler();
+
+                messageEventListener = new MessageEventListener();
+                sqlEventListener = new SQLEventListener();
+
+                pageEventHandler.AgregarObserver(messageEventListener);
+                pageEventHandler.AgregarObserver(sqlEventListener);
             }
+
         }
 
-        protected void btnMandarMensaje_Click(object sender, EventArgs e)
+        protected void btnHacerEvent_Click(object sender, EventArgs e)
         {
-            string mensaje = tbMensaje.Text;
-
-            Observador martin = new Observador(cosoQueNotifica, msgMartin);
-            Observador octavio = new Observador(cosoQueNotifica, msgOctavio);
-            Observador ana = new Observador(cosoQueNotifica, msgAna);
-            Observador juan = new Observador(cosoQueNotifica, msgJuan);
-
-
-
-            martin.suscribir();
-            octavio.suscribir();
-            ana.suscribir();
-            juan.suscribir();
-
-
-            if (cosoQueNotifica != null)
-            {
-                cosoQueNotifica.notificarTodos(mensaje);
-            }
+            pageEventHandler.NotificarTodos();
         }
 
-        
+        protected void BtnEventListenerSuscribe_Click(object sender, EventArgs e)
+        {
+            pageEventHandler.RemoverObserver(messageEventListener);
+            BtnEventListenerSuscribe.Text = "Activar";
+        }
+
+        protected void BtnEventListenerSQLSuscribe_Click(object sender, EventArgs e)
+        {
+            pageEventHandler.RemoverObserver(sqlEventListener);
+            BtnEventListenerSQLSuscribe.Text = "Activar";
+        }
     }
 }
 
